@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class FirstTest {
 	
 	@Test
-	public void verifyURl() {
+	public void verifyURl() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Akshay Jadhav\\OneDrive\\Desktop\\Selenium\\chromedriver.exe");
 		WebDriver c = new ChromeDriver();
 		c.get("https://www.saucedemo.com/");// get - open url
@@ -19,7 +19,7 @@ public class FirstTest {
 		c.findElement(By.id("password")).sendKeys("secret_sauce");//valid
 		c.findElement(By.id("login-button")).click();
 		assertEquals(c.getCurrentUrl(), "https://www.saucedemo.com/inventory.html", "Url is not match");
-		c.close();
+		Thread.sleep(5000);
 	}
 
 }
