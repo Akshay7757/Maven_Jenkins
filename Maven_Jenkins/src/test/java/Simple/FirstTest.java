@@ -11,6 +11,7 @@ public class FirstTest {
 	
 	@Test
 	public void verifyURl() throws InterruptedException {
+		System.out.println("------- Welcome to Java -------");
 		System.out.println("------- Welcome to Jenkins -------");
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Akshay Jadhav\\OneDrive\\Desktop\\Selenium\\chromedriver.exe");
 		WebDriver c = new ChromeDriver();
@@ -21,6 +22,7 @@ public class FirstTest {
 		c.findElement(By.id("login-button")).click();
 		assertEquals(c.getCurrentUrl(), "https://www.saucedemo.com/inventory.html", "Url is not match");
 		Thread.sleep(5000);
+		
 	}
 
 }
