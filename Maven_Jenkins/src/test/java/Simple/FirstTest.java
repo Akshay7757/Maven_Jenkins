@@ -11,6 +11,7 @@ public class FirstTest {
 	
 	@Test
 	public void verifyURl() throws InterruptedException {
+		System.out.println("------- Welcome to Jenkins -------");
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Akshay Jadhav\\OneDrive\\Desktop\\Selenium\\chromedriver.exe");
 		WebDriver c = new ChromeDriver();
 		c.get("https://www.saucedemo.com/");// get - open url
